@@ -9,7 +9,7 @@ function MainNavigation() {
     return (
         <header className={classes.Header}>
             <div className={classes.LogoContainer}>
-                <Link className={classes.Link} href="/"> <a> <Logo /> </a> </Link>
+                <Link className={classes.Link} href="/"> <Logo />  </Link>
             </div>
 
             <nav>

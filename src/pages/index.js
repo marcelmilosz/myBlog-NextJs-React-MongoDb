@@ -3,13 +3,29 @@ import Hero from "components/home-page/hero";
 import { Fragment } from "react";
 
 
+const DUMMY_POSTS = [
+  {
+    slug: 'getting-started-with-next-js1',
+    title: "Getting started with NextJs",
+    image: "getting-started-nextjs.png",
+    excerpt: "NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
+    date: '2022-02-10'
+  },
+  {
+    slug: 'getting-started-with-next-js1',
+    title: "Getting started with NextJs",
+    image: "getting-started-nextjs.png",
+    excerpt: "NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
+    date: '2022-02-10'
+  }
+]
 
 
 function HomePage() {
   return (
     <Fragment>
       <Hero />
-      <FeaturedPosts />
+      <FeaturedPosts posts={DUMMY_POSTS} />
     </Fragment>
   )
 }

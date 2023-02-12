@@ -1,15 +1,12 @@
+import PostsGrid from 'components/posts/posts-grid';
 import classes from './featured-posts.module.scss';
 
-function FeaturedPosts() {
+function FeaturedPosts(props) {
 
     return (
-        <section>
-            <div>
-
-            </div>
-            <h1> Hi is me Mario!</h1>
-            <p> NextJs Course! Hello my name is Eminem and I want to kill my self :D </p>
-
+        <section className={classes.FeaturedPosts}>
+            <h2> Featured Posts </h2>
+            <PostsGrid posts={props.posts} />
         </section>
     )
 }

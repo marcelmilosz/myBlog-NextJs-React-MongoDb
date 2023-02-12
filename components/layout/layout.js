@@ -7,7 +7,7 @@ function Layout(props) {
         <Fragment>
             <MainNavigation />
 
-            <main>
+            <main style={{ height: "100%" }}>
                 {props.children}
             </main>
         </Fragment>
