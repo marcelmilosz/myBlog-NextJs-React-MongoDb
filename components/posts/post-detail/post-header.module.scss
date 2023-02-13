@@ -1,0 +1,20 @@
+.PostHeader {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
+    h1 {
+        font-size: 36px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
