@@ -2,28 +2,52 @@ import PostHeader from "./post-header";
 
 import classes from './post-content.module.scss'
 import ReactMarkdown from 'react-markdown'
+import Image from "next/image";
+
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 
-function PostContent() {
+function PostContent(props) {
 
-    const DUMMY_POST = {
+    const { post } = props;
 
-        slug: 'getting-started-with-next-js1',
-        title: "Getting started with NextJs",
-        image: "getting-started-nextjs.png",
-        content: '# Hello, *world*!',
-        date: '2022-02-10'
+    const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
-    }
+    const customRenderers = {
+        paragraph(paragraph) {
+            const { node } = paragraph;
+            if (node.children[0].type === 'image') {
+                const image = node.children[0];
+
+                return <div className={classes.image}>
+                    <Image src={`/images/posts/${post.slug}/${image.url}`} alt={image.alt} width={600} height={300} />
+                </div>
+            }
+
+            return <p> {paragraph.children} </p>
+        },
+        code(code) {
+            const { className, children } = code
+
+            const match = /language-(\w+)/.exec(className || '')
+
+            return (
+                <SyntaxHighlighter
+                    style={atomDark}
+                    language={match[1]}
+                >{children}</SyntaxHighlighter>)
+        }
 
 
-    const imagePath = `/images/posts/${DUMMY_POST.slug}/${DUMMY_POST.image}`
+
+    };
 
     return (
         <article className={classes.PostContent}>
             <div className={classes.PostContentContainer}>
-                <PostHeader title={DUMMY_POST.title} image={imagePath} />
-                <ReactMarkdown>{DUMMY_POST.content}</ReactMarkdown>
+                <PostHeader title={post.title} image={imagePath} />
+                <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
             </div>
 
         </article>

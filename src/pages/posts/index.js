@@ -1,25 +1,29 @@
 import AllPosts from "components/posts/all-posts";
+import { getAllPosts } from "lib/posts-util";
+import Head from "next/head";
+import { Fragment } from "react";
 
-function AllPostsPage() {
+function AllPostsPage(props) {
+    return (
+        <Fragment>
+            <Head>
+                <title> All Posts </title>
+                <meta name="description" content='A list of all my programming-related tutorials and posts!' />
+            </Head>
+            <AllPosts posts={props.posts} />
+        </Fragment>
+    )
 
-    const DUMMY_POSTS = [
-        {
-            slug: 'getting-started-with-next-js1',
-            title: "Getting started with NextJs",
-            image: "getting-started-nextjs.png",
-            excerpt: "NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
-            date: '2022-02-10'
-        },
-        {
-            slug: 'getting-started-with-next-js1',
-            title: "Getting started with NextJs",
-            image: "getting-started-nextjs.png",
-            excerpt: "NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR",
-            date: '2022-02-10'
+}
+
+export function getStaticProps() {
+    const allPosts = getAllPosts();
+
+    return {
+        props: {
+            posts: allPosts
         }
-    ]
-
-    return <AllPosts posts={DUMMY_POSTS} />
+    }
 }
 
 export default AllPostsPage;
