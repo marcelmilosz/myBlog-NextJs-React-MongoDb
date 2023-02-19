@@ -1,0 +1,47 @@
+.myBtn {
+    background-color: transparent;
+    min-width: 100px;
+
+    border: 0;
+    border: 1px solid #fff;
+    border-radius: 4px;
+
+    padding: 0.4rem 0.8rem;
+    font-size: 16px;
+    font-family: inherit;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: transform 200ms;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+
+        transform: scale(1.02);
+    }
+}
+
+.myReadMore {
+    border: 0;
+    background-color: transparent;
+
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 300;
+
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.2rem;
+
+    color: #000;
+
+    transition: transform 200ms;
+
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}

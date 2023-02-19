@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import classes from './post-item.module.scss'
+import globals from '../../src/styles/globals.module.scss'
 
 function PostItem(props) {
 
@@ -20,11 +21,12 @@ function PostItem(props) {
     return (
         <li className={classes.PostItem}>
             <Link href={linkPath}>
-                <div> <Image className={classes.PostImage} src={imagePath} alt={title} width={300} height={200} /> </div>
-                <div>
-                    <h3> Title </h3>
+                <Image className={classes.PostImage} src={imagePath} alt={title} width={300} height={200} />
+                <div className={classes.PostContainer}>
+                    <h3> {title} </h3>
                     <time> {formattedDate} </time>
                     <p> {excerpt} </p>
+                    <button className={globals.myReadMore}> Read more &gt; </button>
                 </div>
             </Link>
         </li>

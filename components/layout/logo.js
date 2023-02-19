@@ -2,7 +2,7 @@ import classes from './logo.module.scss'
 
 function Logo() {
     return (
-        <div className={classes.Logo}> Marcluu Blog </div>
+        <div className={classes.Logo}> Marcel&apos;s Blog </div>
     )
 }
 

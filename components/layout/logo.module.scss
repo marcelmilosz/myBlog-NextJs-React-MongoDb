@@ -1,5 +1,11 @@
+@import "../../src/styles/mixins.scss";
+
 .Logo {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 500;
     text-decoration: none;
+
+    @include mobile() {
+        font-size: 16px;
+    }
 }

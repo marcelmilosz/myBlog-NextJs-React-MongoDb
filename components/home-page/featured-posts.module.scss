@@ -1,15 +1,31 @@
+@import "../../src/styles/mixins.scss";
+
 .FeaturedPosts {
     width: 100%;
     min-height: 60%;
 
-    background-color: rgb(27, 25, 34);
+    background-color: #fafafa;
 
-    padding: 2rem 4rem;
+    padding: 6rem 0rem;
 
-    h2 {
-        font-size: 40px;
-        color: #ddd;
-        text-align: center;
-        margin-bottom: 2rem;
+    .FeaturedPostsContainer {
+        width: 100%;
+        min-height: 100%;
+
+        padding: 0rem 4rem;
+
+        @include tablet() {
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 4rem;
+            text-align: center;
+            font-weight: 700;
+
+            color: #000;
+
+            margin-bottom: 4rem;
+        }
     }
 }
