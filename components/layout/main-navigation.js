@@ -18,10 +18,10 @@ function MainNavigation() {
 
                     <Link className="navbar-item" href="/">
                         <Image className={classes.Logo} alt="Logo" src={LogoImage} width={512} height={512} />
-                        <a className={`${"navbar-item"} ${classes.navLink}`}> <p> Marcel Miłosz Blog </p> </a>
+                        <p className={`${"navbar-item"} ${classes.navLinkLogo}`}> Marcel Miłosz Blog  </p>
                     </Link>
 
-                    <a role="button" onClick={() => { setMenuToggle(!menuToggle) }} className={`navbar-burger ${(menuToggle) && 'is-active'}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a role="button" onClick={() => { setMenuToggle(!menuToggle) }} className={`navbar-burger ${(menuToggle) && 'is-active'}`} style={{ color: "#FFF" }} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>

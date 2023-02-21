@@ -5,6 +5,8 @@ image: 'getting-started-nextjs.jpg'
 excerpt: "NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR"
 isFeatured: true
 tags: 'JavaScript, NextJs'
+author: 'Marcel Miłosz'
+readTime: '5 min.'
 ---
 
 

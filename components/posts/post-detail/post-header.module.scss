@@ -1,20 +1,78 @@
+@import "../../../src/styles/mixins.scss";
+
 .PostHeader {
-    width: 100%;
+    width: 60%;
     height: 100%;
 
     display: flex;
     align-items: center;
-
+    justify-content: center;
     flex-direction: column;
 
-    gap: 2rem;
-
-    h1 {
-        font-size: 36px;
+    img {
+        max-width: 90%;
     }
 
-    img {
+    @include laptop() {
+        width: 80%;
+    }
+
+    @include tablet() {
+        width: 90%;
+    }
+
+    .PostDescriptionContainer {
         width: 100%;
-        height: auto;
+        min-height: 100%;
+
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+
+            line-height: 0.9;
+            color: #000;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 300;
+
+            color: #444;
+        }
+
+        .PostAuthorContainer {
+            width: 100%;
+            min-height: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-items: flex-start;
+            flex-direction: row;
+
+            margin-top: 1rem;
+
+            gap: 0.5rem;
+
+            img {
+                width: 30px;
+                height: 30px;
+
+                border-radius: 50px;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 1.4rem;
+            }
+        }
     }
 }

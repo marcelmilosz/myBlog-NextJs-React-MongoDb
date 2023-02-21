@@ -7,6 +7,8 @@ import Image from "next/image";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
+import arrowUpIcon from '../../../public/images/up-arrow.png'
+
 
 function PostContent(props) {
 
@@ -36,7 +38,8 @@ function PostContent(props) {
                 <SyntaxHighlighter
                     style={atomDark}
                     language={match[1]}
-                >{children}</SyntaxHighlighter>)
+                >{children}</SyntaxHighlighter>
+            )
         }
 
 
@@ -45,12 +48,19 @@ function PostContent(props) {
 
     return (
         <article className={classes.PostContent}>
-            <div className={classes.PostContentContainer}>
-                <PostHeader title={post.title} image={imagePath} />
-                <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
+
+            <div className={classes.PostUpContainer}>
+                <Image src={arrowUpIcon} alt={"Arrow up"} width={50} height={50} />
             </div>
 
-        </article>
+            <PostHeader post={post} image={imagePath} />
+            <div className={classes.PostContentContainer}>
+                <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
+
+            </div>
+
+
+        </article >
     )
 
 }
