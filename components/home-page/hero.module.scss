@@ -21,7 +21,7 @@
         align-items: center;
         justify-content: center;
 
-        padding-top: 5rem;
+        padding-top: 3rem;
 
         p {
             color: #fff;
@@ -90,13 +90,30 @@
 
                 color: #fff;
 
-                h2 {
-                    font-size: 1.4rem;
-                    font-weight: bold;
+                .HeroNewestContainer {
+                    p {
+                        max-width: fit-content;
+                        padding: 0.2rem 0.6rem;
+
+                        background-color: #a082f6;
+                        border-radius: 2px;
+
+                        font-size: 0.6rem;
+                        font-weight: 600;
+                    }
+
+                    h2 {
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                    }
+                }
+
+                time {
+                    font-size: 1rem;
+                    color: #aaa;
                 }
 
                 p {
-                    margin-top: 1rem;
                     font-size: 1rem;
                     text-align: justify;
                     font-family: "Montserrat", sans-serif;

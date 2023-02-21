@@ -7,7 +7,9 @@ import globals from '../../src/styles/globals.module.scss'
 
 function PostItem(props) {
 
-    const { title, image, excerpt, date, slug } = props.post;
+    const { title, image, excerpt, date, slug, tags } = props.post;
+
+    const splittedTags = tags.split(',')
 
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
         day: "numeric",
@@ -21,8 +23,15 @@ function PostItem(props) {
     return (
         <li className={classes.PostItem}>
             <Link href={linkPath}>
-                <Image className={classes.PostImage} src={imagePath} alt={title} width={300} height={200} />
+                <Image className={classes.PostImage} src={imagePath} alt={title} width={400} height={300} />
                 <div className={classes.PostContainer}>
+                    < div className={classes.PostTagsContainer} >
+                        {splittedTags.map((ele, idx) => {
+                            return (
+                                <p key={idx}> {ele} </p>
+                            )
+                        })}
+                    </div>
                     <h3> {title} </h3>
                     <time> {formattedDate} </time>
                     <p> {excerpt} </p>

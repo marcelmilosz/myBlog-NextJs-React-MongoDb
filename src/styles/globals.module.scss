@@ -32,16 +32,13 @@
     font-family: inherit;
     font-weight: 300;
 
-    border-bottom: 1px solid #000;
     padding-bottom: 0.2rem;
 
-    color: #000;
-
-    transition: transform 200ms;
+    color: #7b6cf1;
 
     cursor: pointer;
 
     &:hover {
-        transform: scale(1.02);
+        font-weight: 600;
     }
 }

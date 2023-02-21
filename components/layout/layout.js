@@ -10,7 +10,13 @@ function Layout(props) {
 
             <main className={classes.Page}>
                 {props.children}
+
+                <div className={classes.footer}>
+                    <p> &copy; Marcel Miłosz Blog 2023+. All rigths reserved.</p>
+                </div>
             </main>
+
+
         </Fragment>
     )
 

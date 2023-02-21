@@ -1,10 +1,10 @@
 ---
-title: Mastering JavaScript
-excerpt: JavaScript is the most important programming language for web development. You probably don't know it well enough!
-image: mastering-javascript-thumb.png
+title: Understanding HSL format
+excerpt: JavaScript is the most important programming language for web development. You probably don't know it well enough! Let me add more and more text to see how responsible is this element haha 
+image: understanding-the-hsl-format.jpg
 isFeatured: true
-date: '2023-01-25'
-tags: 'JavaScript'
+date: '2023-02-21'
+tags: 'CSS'
 ---
 
 JavaScript powers the web - it's **the** most important programming language you need to know as a web developer.

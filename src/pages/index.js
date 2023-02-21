@@ -13,7 +13,7 @@ function HomePage(props) {
         <meta name="description" content='A passionate programmer that talks about web dev' />
         {/* Favicon here  */}
       </Head>
-      <Hero />
+      <Hero posts={props.posts} />
       <FeaturedPosts posts={props.posts} />
     </Fragment>
   )

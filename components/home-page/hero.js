@@ -3,11 +3,20 @@ import classes from './hero.module.scss';
 import globals from '../../src/styles/globals.module.scss'
 import downArrowIcon from '../../public/images/down.png'
 
-function Hero() {
+function Hero(props) {
+
+    const { posts } = props;
+    const imagePath = `/images/posts/${posts[0].slug}/${posts[0].image}`
+
+    const date = posts[0].date
+    const formattedDate = new Date(date).toLocaleDateString("en-US", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
 
     return (
         <section className={classes.Hero}>
-            {/* <h1> Breaking Down the Stack: Learn Full Stack Development with Easy-to-Understand Explanations </h1> */}
 
             <div className="container is-max-widescreen">
                 <div className='container is-fluid'>
@@ -21,10 +30,14 @@ function Hero() {
 
                         {/* Latest Post here */}
                         <div className={classes.HeroLatestPostContainer}>
-                            <Image src='/images/posts/getting-started-with-nextjs/getting-started-nextjs.png' alt='Latest post' width={350} height={175} />
+                            <Image src={imagePath} alt='Latest post' width={400} height={300} />
                             <div className={classes.HeroDescriptionContainer}>
-                                <h2> Latest Post </h2>
-                                <p> NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR</p>
+                                <div className={classes.HeroNewestContainer}>
+                                    <p> Latest </p>
+                                    <h2> {posts[0].title}</h2>
+                                </div>
+                                <time> {formattedDate} </time>
+                                <p style={{ marginTop: "1.5rem" }}> {posts[0].excerpt} </p>
                                 <button className={globals.myBtn}> Read more </button>
                             </div>
                         </div>
