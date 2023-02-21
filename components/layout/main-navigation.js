@@ -13,13 +13,13 @@ function MainNavigation() {
     return (
 
         <nav className={"navbar is-fixed-top " + classes.navbar} role="navigation" aria-label="main navigation">
-            <div class="container is-max-widescreen">
+            <div className="container is-max-widescreen">
                 <div className="navbar-brand">
 
                     <Link className="navbar-item" href="/">
                         <Image className={classes.Logo} alt="Logo" src={LogoImage} width={512} height={512} />
+                        <a className={`${"navbar-item"} ${classes.navLink}`}> <p> Marcel Miłosz Blog </p> </a>
                     </Link>
-                    <a className="navbar-item">Marcel Miłosz Blog</a>
 
                     <a role="button" onClick={() => { setMenuToggle(!menuToggle) }} className={`navbar-burger ${(menuToggle) && 'is-active'}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
@@ -33,10 +33,10 @@ function MainNavigation() {
 
                     <div className="navbar-end">
                         <div className="navbar-item">
-                            <a className="navbar-item">Home</a>
-                            <a className="navbar-item">All Posts</a>
-                            <a className="navbar-item">About me</a>
-                            <a className="navbar-item">Contact</a>
+                            <Link className={classes.navLink} href="/"><p className="navbar-item">Home</p></Link>
+                            <Link className={classes.navLink} href="/posts"><p className="navbar-item">All Posts</p></Link>
+                            <Link className={classes.navLink} href="/"><p className="navbar-item">About</p></Link>
+                            <Link className={classes.navLink} href="/"><p className="navbar-item">Contact</p></Link>
                         </div>
                     </div>
                 </div>

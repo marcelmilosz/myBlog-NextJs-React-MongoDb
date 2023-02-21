@@ -8,12 +8,14 @@
     opacity: 0.95;
     height: 56px;
 
-    a {
-        color: #fff;
+    .navLink {
+        p {
+            color: #fff;
 
-        &:hover {
-            background-color: #111;
-            color: #7b6cf1;
+            &:hover {
+                background-color: #111;
+                color: #7b6cf1;
+            }
         }
     }
 
