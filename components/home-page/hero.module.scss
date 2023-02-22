@@ -28,7 +28,13 @@
             display: flex;
             gap: 0.5rem;
 
-            cursor: default;
+            cursor: pointer;
+
+            transition: transform 200ms;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
 

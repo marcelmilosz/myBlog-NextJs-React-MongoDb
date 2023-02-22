@@ -8,6 +8,7 @@ import globals from '../../src/styles/globals.module.scss'
 function PostItem(props) {
 
     const { title, image, excerpt, date, slug, tags } = props.post;
+    const { id } = props;
 
     const splittedTags = tags.split(',')
 
@@ -21,14 +22,14 @@ function PostItem(props) {
     const linkPath = `/posts/${slug}`;
 
     return (
-        <li className={classes.PostItem}>
+        <li className={classes.PostItem} id={id}>
             <Link href={linkPath}>
                 <Image className={classes.PostImage} src={imagePath} alt={title} width={400} height={300} />
                 <div className={classes.PostContainer}>
                     <div className={classes.PostTagsContainer} >
                         {splittedTags.map((ele, idx) => {
                             return (
-                                <p key={idx}> {ele} </p>
+                                <p key={`tag-${idx}`}> {ele} </p>
                             )
                         })}
                     </div>

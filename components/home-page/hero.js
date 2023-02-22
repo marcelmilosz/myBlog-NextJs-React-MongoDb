@@ -2,6 +2,7 @@ import Image from 'next/image';
 import classes from './hero.module.scss';
 import globals from '../../src/styles/globals.module.scss'
 import downArrowIcon from '../../public/images/down.png'
+import Link from 'next/link';
 
 function Hero(props) {
 
@@ -14,6 +15,15 @@ function Hero(props) {
         month: "long",
         year: "numeric"
     });
+
+    const firstPostLink = '/posts/' + posts[0].image.replace(".jpg", "").replace(".png", "")
+
+    function smoothScrollToFirstPost() {
+
+        let ele = document.querySelector("#li1")
+
+        ele.scrollIntoView();
+    }
 
     return (
         <section className={classes.Hero}>
@@ -38,7 +48,7 @@ function Hero(props) {
                                 </div>
                                 <time> {formattedDate} </time>
                                 <p style={{ marginTop: "1.5rem" }}> {posts[0].excerpt} </p>
-                                <button className={globals.myBtn}> Read more </button>
+                                <Link href={firstPostLink}> <button className={globals.myBtn}>  Read more  </button></Link>
                             </div>
                         </div>
 
@@ -46,9 +56,8 @@ function Hero(props) {
 
                     </div>
 
-                    <div className={classes.HeroDownContainer}>
+                    <div className={classes.HeroDownContainer} onClick={smoothScrollToFirstPost}>
                         <p> Featured Posts <Image src={downArrowIcon} alt='featured posts arrow' width={25} height={25} /> </p>
-
                     </div>
                 </div>
             </div>
