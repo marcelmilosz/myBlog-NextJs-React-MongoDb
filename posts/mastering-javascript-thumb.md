@@ -6,7 +6,8 @@ isFeatured: true
 date: '2023-01-25'
 tags: 'JavaScript'
 author: 'Marcel Miłosz'
-readTime: '5 min.'
+readTime: '8 min.'
+postId: 2
 ---
 
 JavaScript is one of the most popular programming languages in use today. It is a powerful language used to build websites, web applications, mobile applications, and even desktop applications. Mastering JavaScript involves gaining a deep understanding of the language, its features, and its quirks.
@@ -39,7 +40,6 @@ function testScope() {
   console.log(a); // Output: 10
   console.log(b); // Output: ReferenceError: b is not defined
 }
-
 ```
 
 In this example, a is declared inside the testScope function, and b is declared inside the if block. a is accessible both inside and outside the if block, but b is only accessible inside the if block.
@@ -56,7 +56,6 @@ function fetchData(callback) {
 fetchData(function(data) {
   console.log(data); // Output: Data fetched
 });
-
 ```
 
 In this example, the fetchData function takes a callback function as an argument. Inside the fetchData function, a time-consuming operation is performed using the setTimeout function. When the operation is complete, the callback function is called with the data that was fetched.

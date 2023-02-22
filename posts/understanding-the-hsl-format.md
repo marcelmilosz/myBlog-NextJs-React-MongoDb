@@ -7,6 +7,7 @@ date: '2023-02-21'
 tags: 'CSS'
 author: 'Marcel Miłosz'
 readTime: '5 min.'
+postId: 3
 ---
 
 JavaScript powers the web - it's **the** most important programming language you need to know as a web developer.

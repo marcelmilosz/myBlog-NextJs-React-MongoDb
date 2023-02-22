@@ -35,6 +35,14 @@
 
     background-color: #111;
 
+    .showAnimation {
+        animation: show 600ms forwards;
+    }
+
+    .hideAnimation {
+        animation: hide 600ms forwards;
+    }
+
     .PostUpContainer {
         width: 50px;
         height: 50px;
@@ -56,14 +64,6 @@
         &:hover {
             transform: scale(1.05);
         }
-    }
-
-    .showAnimation {
-        animation: show 600ms forwards;
-    }
-
-    .hideAnimation {
-        animation: hide 600ms forwards;
     }
 }
 

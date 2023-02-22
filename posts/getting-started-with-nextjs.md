@@ -6,7 +6,8 @@ excerpt: "NextJs is a React framework for production - it makes building fullsta
 isFeatured: true
 tags: 'JavaScript, NextJs'
 author: 'Marcel Miłosz'
-readTime: '5 min.'
+readTime: '10 min.'
+postId: 1
 ---
 
 

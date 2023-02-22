@@ -14,13 +14,13 @@
     align-items: center;
 
     .PostContentContainer {
-        width: 40%;
+        width: 55%;
         margin-top: 2rem;
 
         background-color: #fff;
 
         @include laptop() {
-            width: 60%;
+            width: 70%;
         }
 
         @include tablet() {
@@ -55,7 +55,127 @@
             overflow: scroll;
 
             @include tablet() {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none;
+        }
+
+        .otherPostsContainer {
+            width: 100%;
+            min-height: 200px;
+
+            margin-top: 2rem;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+
+            padding: 1rem;
+
+            @include tablet {
+                flex-direction: column;
+            }
+
+            a {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .otherPostsBox {
+                flex: 1;
+                min-height: 200px;
+                max-height: 300px;
+
+                padding: 1.4rem;
+
+                background-color: #fff;
+
+                border-radius: 4px;
+                box-shadow: 0px 0px 7px #ddd;
+
+                overflow: scroll;
+
+                transition: all 200ms;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none;
+
+                h2 {
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    color: #333;
+                }
+
+                time {
+                    font-size: 1rem;
+                    color: #666;
+                }
+
+                h1 {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    line-height: 1.1;
+
+                    margin-bottom: 0.2rem;
+                    color: #222;
+                }
+
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: #666;
+
+                    margin-top: 1rem;
+                }
+
+                button {
+                    margin-top: 1.5rem;
+                    cursor: pointer;
+                }
+
+                .tagsContainer {
+                    width: 100%;
+                    min-height: 20px;
+                    margin-top: 0.4rem;
+
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+
+                    span {
+                        margin: 0;
+
+                        max-width: fit-content;
+                        padding: 0.2rem 0.6rem;
+
+                        background-color: #a082f6;
+                        border-radius: 2px;
+                        color: #fff;
+
+                        font-size: 0.6rem;
+                        font-weight: 600;
+                        font-family: "Montserrat", sans-serif;
+
+                        display: block;
+                    }
+                }
             }
         }
     }
