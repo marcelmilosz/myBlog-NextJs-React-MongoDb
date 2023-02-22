@@ -63,12 +63,16 @@ function PostContent(props) {
             if (node.children[0].type === 'image') {
                 const image = node.children[0];
 
-                return <div className={classes.image}>
-                    <Image src={`/images/posts/${post.slug}/${image.url}`} alt={image.alt} width={600} height={300} />
-                </div>
+                return (
+                    <div className={classes.image}>
+                        <Image src={`/images/posts/${post.slug}/${image.url}`} alt={image.alt} width={600} height={300} />
+                    </div>
+                )
+            } else {
+                return <p> {paragraph.children} </p>
             }
 
-            return <p> {paragraph.children} </p>
+
         },
         code(code) {
             const { className, children } = code
@@ -99,9 +103,9 @@ function PostContent(props) {
                         <Link href={`/posts/${prevPost.slug}`}>
                             <div className={classes.otherPostsBox}>
                                 <div className={classes.otherPostImage}>
-                                    <h2> Previous </h2>
+                                    <p className={classes.otherInfo}> Previous </p>
                                     <time> {prevPost.date} </time>
-                                    <h1> {prevPost.title} </h1>
+                                    <p className={classes.otherTitle}> {prevPost.title} </p>
                                     <div className={classes.tagsContainer}>
                                         {
                                             prevPost.tags.split(',').map((ele, idx) => {
@@ -111,7 +115,7 @@ function PostContent(props) {
                                             })
                                         }
                                     </div>
-                                    <h3> Read time: {prevPost.readTime} </h3>
+                                    <p className={classes.otherTime}> Read time: {prevPost.readTime} </p>
                                 </div>
                             </div>
                         </Link>
@@ -119,9 +123,9 @@ function PostContent(props) {
                         <Link href={`/posts/${nextPost.slug}`}>
                             <div className={classes.otherPostsBox}>
                                 <div className={classes.otherPostImage}>
-                                    <h2> Next </h2>
+                                    <p className={classes.otherInfo}> Next </p>
                                     <time> {nextPost.date} </time>
-                                    <h1> {nextPost.title} </h1>
+                                    <p className={classes.otherTitle}> {nextPost.title} </p>
                                     <div className={classes.tagsContainer}>
                                         {
                                             nextPost.tags.split(',').map((ele, idx) => {
@@ -131,7 +135,7 @@ function PostContent(props) {
                                             })
                                         }
                                     </div>
-                                    <h3> Read time: {nextPost.readTime} </h3>
+                                    <p className={classes.otherTime}> Read time: {nextPost.readTime} </p>
                                 </div>
                             </div>
                         </Link>
@@ -145,9 +149,9 @@ function PostContent(props) {
                         <Link href={`/posts/${prevPost.slug}`}>
                             <div className={classes.otherPostsBox} style={{ width: "50%", flex: "none" }}>
                                 <div className={classes.otherPostImage}>
-                                    <h2> Previous </h2>
+                                    <p className={classes.otherInfo}> Previous </p>
                                     <time> {prevPost.date} </time>
-                                    <h1> {prevPost.title} </h1>
+                                    <p className={classes.otherTitle}> {prevPost.title} </p>
                                     <div className={classes.tagsContainer}>
                                         {
                                             prevPost.tags.split(',').map((ele, idx) => {
@@ -157,7 +161,7 @@ function PostContent(props) {
                                             })
                                         }
                                     </div>
-                                    <h3> Read time: {prevPost.readTime} </h3>
+                                    <p className={classes.otherTime}> Read time: {prevPost.readTime} </p>
                                 </div>
                             </div>
                         </Link>
@@ -171,9 +175,9 @@ function PostContent(props) {
                         <Link href={`/posts/${nextPost.slug}`}>
                             <div className={classes.otherPostsBox} style={{ width: "50%", flex: "none" }}>
                                 <div className={classes.otherPostImage}>
-                                    <h2> Next </h2>
+                                    <p className={classes.otherInfo}> Next </p>
                                     <time> {nextPost.date} </time>
-                                    <h1> {nextPost.title} </h1>
+                                    <p className={classes.otherTitle}> {nextPost.title} </p>
                                     <div className={classes.tagsContainer}>
                                         {
                                             nextPost.tags.split(',').map((ele, idx) => {
@@ -183,7 +187,7 @@ function PostContent(props) {
                                             })
                                         }
                                     </div>
-                                    <h3> Read time: {nextPost.readTime} </h3>
+                                    <p className={classes.otherTime}> Read time: {nextPost.readTime} </p>
                                 </div>
                             </div>
                         </Link>

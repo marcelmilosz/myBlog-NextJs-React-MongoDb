@@ -12,7 +12,7 @@ postId: 2
 
 JavaScript is one of the most popular programming languages in use today. It is a powerful language used to build websites, web applications, mobile applications, and even desktop applications. Mastering JavaScript involves gaining a deep understanding of the language, its features, and its quirks.
 
-One of the fundamental concepts in JavaScript is the concept of functions. Functions in JavaScript are first-class citizens, which means they can be assigned to variables, passed as arguments to other functions, and even returned from functions. Here's an example of a simple JavaScript function:
+One of the fundamental concepts in JavaScript is the concept of **functions**. Functions in JavaScript are first-class citizens, which means they can be assigned to variables, passed as arguments to other functions, and even returned from functions. Here's an example of a simple JavaScript function:
 
 ```js
 function addNumbers(a, b) {
@@ -27,7 +27,7 @@ let result = addNumbers(2, 3);
 console.log(result); // Output: 5
 ```
 
-Another important aspect of JavaScript is the concept of scope. In JavaScript, variables have function scope, which means that a variable declared inside a function is only accessible within that function. Here's an example:
+Another important aspect of JavaScript is the concept of **scope**. In JavaScript, variables have function scope, which means that a variable declared inside a function is only accessible within that function. Here's an example:
 
 ```js
 function testScope() {
@@ -44,7 +44,7 @@ function testScope() {
 
 In this example, a is declared inside the testScope function, and b is declared inside the if block. a is accessible both inside and outside the if block, but b is only accessible inside the if block.
 
-Another important concept in JavaScript is asynchronous programming. Asynchronous programming allows you to perform time-consuming operations without blocking the main thread of your application. One of the most common ways to do asynchronous programming in JavaScript is by using callbacks. Here's an example:
+Another important concept in JavaScript is **asynchronous programming**. Asynchronous programming allows you to perform time-consuming operations without blocking the main thread of your application. One of the most common ways to do asynchronous programming in JavaScript is by using callbacks. Here's an example:
 
 ```js
 function fetchData(callback) {

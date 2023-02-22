@@ -17,7 +17,7 @@ function PostHeader(props) {
 
     return (
         <header className={classes.PostHeader}>
-            <Image src={image} alt={title} width={2000} height={1000} />
+            <Image src={image} alt={title} width={1000} height={500} />
             <div className={classes.PostDescriptionContainer}>
                 <p> {formattedDate} </p>
                 <h1> {title} </h1>

@@ -19,6 +19,8 @@
 
         background-color: #fff;
 
+        color: #222;
+
         @include laptop() {
             width: 70%;
         }
@@ -31,6 +33,12 @@
             width: 95%;
         }
 
+        h2 {
+            padding: 1rem 2rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
         p {
             font-weight: 400;
             font-size: 1.1rem;
@@ -39,6 +47,12 @@
 
             color: #222;
             letter-spacing: -0.01em;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 50%;
+            }
         }
 
         pre {
@@ -64,6 +78,10 @@
 
             -ms-overflow-style: none; /* IE and Edge */
             scrollbar-width: none;
+        }
+
+        strong {
+            font-weight: bold;
         }
 
         .otherPostsContainer {
@@ -117,32 +135,36 @@
                 -ms-overflow-style: none; /* IE and Edge */
                 scrollbar-width: none;
 
-                h2 {
+                .otherInfo {
                     font-weight: 600;
                     margin-bottom: 1rem;
                     color: #333;
+                    padding: 0;
                 }
 
                 time {
-                    font-size: 1rem;
+                    font-weight: 300;
+                    font-size: 0.8rem;
                     color: #666;
                 }
 
-                h1 {
+                .otherTitle {
                     font-size: 1.2rem;
                     font-weight: 700;
                     line-height: 1.1;
 
                     margin-bottom: 0.2rem;
                     color: #222;
+                    padding: 0;
                 }
 
-                h3 {
+                .otherTime {
                     font-size: 1rem;
                     font-weight: 300;
                     color: #666;
 
                     margin-top: 1rem;
+                    padding: 0;
                 }
 
                 button {
