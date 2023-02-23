@@ -9,13 +9,15 @@ function AllPosts(props) {
         <section className={classes.AllPosts}>
             <div className="container is-max-widescreen">
                 <div className='container is-fluid'>
-                    <h1>
-                        All Posts
-                    </h1>
+                    <div className={classes.AllPostsContainer}>
+                        <h1>
+                            All Posts
+                        </h1>
 
-                    <ul className={classes.grid}>
-                        {posts.map((post, idx) => <PostItem key={post.slug + "-" + idx} post={post} />)}
-                    </ul>
+                        <ul className={classes.grid}>
+                            {posts.map((post, idx) => <PostItem key={post.slug + "-" + idx} post={post} />)}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>

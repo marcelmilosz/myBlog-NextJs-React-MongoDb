@@ -10,14 +10,27 @@
     a {
         text-decoration: none;
         color: #bbb;
+        cursor: pointer;
     }
 
-    .PostImage {
+    .PostImageContainer {
         width: 100%;
-        height: auto;
+        height: 250px;
 
-        margin: 0;
-        border-bottom: 1px solid #eee;
+        overflow: hidden;
+
+        .PostImage {
+            width: 100%;
+
+            margin: 0;
+            border-bottom: 1px solid #eee;
+
+            transition: transform 200ms;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
 
     .PostContainer {
@@ -29,6 +42,8 @@
 
         display: flex;
         flex-direction: column;
+
+        cursor: pointer;
 
         h3 {
             font-size: 1.4rem;
@@ -77,4 +92,6 @@
     &:hover {
         transform: scale(1.02);
     }
+
+    cursor: pointer;
 }

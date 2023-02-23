@@ -1,6 +1,6 @@
 ---
 title: Understanding HSL format
-excerpt: JavaScript is the most important programming language for web development. You probably don't know it well enough! Let me add more and more text to see how responsible is this element haha 
+excerpt: "From Hue to Lightness: - Demystifying the HSL Color Model and its Components - A Comprehensive Guide to Understanding HSL Format and Its Applications in Design"
 image: understanding-the-hsl-format.jpg
 isFeatured: true
 date: '2023-02-21'

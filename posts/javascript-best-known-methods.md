@@ -1,8 +1,8 @@
 ---
 title: 'Best known methods in JavaScript'
 date: '2023-01-29'
-image: 'javascript-best-known-methods.png'
-excerpt: "NextJs is a React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR"
+image: 'javascript-best-known-methods.jpg'
+excerpt: "Mastering JavaScript: A Compilation of the Best Known JavaScript Methods for Efficient Web Development"
 isFeatured: true
 tags: 'JavaScript'
 author: 'Marcel Miłosz'

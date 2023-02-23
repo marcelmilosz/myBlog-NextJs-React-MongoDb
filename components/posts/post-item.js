@@ -24,7 +24,10 @@ function PostItem(props) {
     return (
         <li className={classes.PostItem} id={id}>
             <Link href={linkPath}>
-                <Image className={classes.PostImage} src={imagePath} alt={title} width={400} height={300} />
+                <div className={classes.PostImageContainer}>
+                    <Image className={classes.PostImage} src={imagePath} alt={title} width={400} height={300} />
+                </div>
+
                 <div className={classes.PostContainer}>
                     <div className={classes.PostTagsContainer} >
                         {splittedTags.map((ele, idx) => {
