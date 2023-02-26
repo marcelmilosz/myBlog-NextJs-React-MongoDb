@@ -35,8 +35,8 @@ function MainNavigation() {
                         <div className="navbar-item">
                             <Link className={classes.navLink} href="/"><p className="navbar-item">Home</p></Link>
                             <Link className={classes.navLink} href="/posts"><p className="navbar-item">All Posts</p></Link>
-                            <Link className={classes.navLink} href="/"><p className="navbar-item">About</p></Link>
-                            <Link className={classes.navLink} href="/"><p className="navbar-item">Contact</p></Link>
+                            <Link className={classes.navLink} href="/about"><p className="navbar-item">About</p></Link>
+                            <Link className={classes.navLink} href="/contact"><p className="navbar-item">Contact</p></Link>
                         </div>
                     </div>
                 </div>
@@ -47,20 +47,5 @@ function MainNavigation() {
     )
 }
 
-{/* // <header className={classes.Header}>
-        //     <div className={classes.LogoContainer}>
-        //         <Image src={LogoImage} alt={"Logo - home page"} width={512} height={512} />
-        //         <a className={classes.Link} href="/"> <Logo /> </a>
-        //     </div>
-
-        //     <nav>
-        //         <ul>
-        //             <li> <a className={classes.Link} href="/"> Home </a> </li>
-        //             <li> <a className={classes.Link} href="/posts"> Posts </a> </li>
-        //             <li> <a className={classes.Link} href="/about"> About me </a> </li>
-        //             <li> <a className={classes.Link} href="/contact"> Contact </a> </li>
-        //         </ul>
-        //     </nav>
-        // </header> */}
 
 export default MainNavigation;
