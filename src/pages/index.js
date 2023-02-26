@@ -11,7 +11,6 @@ function HomePage(props) {
       <Head>
         <title> Marcels Blog</title>
         <meta name="description" content='A passionate programmer that talks about web dev' />
-        {/* Favicon here  */}
       </Head>
       <Hero posts={props.posts} />
       <FeaturedPosts posts={props.posts} />

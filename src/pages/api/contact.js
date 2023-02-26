@@ -1,12 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import { MongoClient } from 'mongodb'
-import keys from '../../../mongoKeys.json'
 
 async function handler(req, res) {
   // res.status(200).json({ name: 'John Doe' })
 
-  const { MONGO_URL } = `mongodb+ srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_cluster}.ssb3kaa.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
+  const MONGO_URL = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_cluster}.rrdkbfe.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
 
 
   if (req.method === 'POST') {

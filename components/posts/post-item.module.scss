@@ -23,7 +23,7 @@
 
         overflow: hidden;
 
-        @include tablet() {
+        @include laptop() {
             max-height: 500px;
         }
 
