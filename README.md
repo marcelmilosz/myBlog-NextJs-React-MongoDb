@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Hello!
 
-## Getting Started
+This is my NextJs project that I wanted to do for a long time. 
+I recently finished NextJs course, and because of that, I wanted to use this knowledge to create something with it!
 
-First, run the development server:
+Soo.. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This is a full stack page, hosted using Vercel on this link: 
+https://my-blog-seven-gamma.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+What I've learned:
+- NextJs pre-rendering stuff
+- Using getStaticProps, getStaticPaths
+- Using Next/Link, Next/Image
+- Using Syntax Higlighter from React
+- Using markdown files and showing them on screen!
+- Configuring _app and _document files
+- Storing files in correct folders
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project can be a template for your own blog, only thing you have to provide is .md files and images in 'posts' folders!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+On this blog we have:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Hero and featured post page 
+![Zrzut ekranu 2023-02-26 o 16 04 19](https://user-images.githubusercontent.com/61027817/221418875-46aa0446-595a-4e6a-acc8-9235073401b6.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# All posts page
+![allPost](https://user-images.githubusercontent.com/61027817/221418914-0203dfa5-f9e3-414c-aa62-a3a162a311eb.png)
 
-## Learn More
+# Single post page (running on markdown files .md)
+![single post](https://user-images.githubusercontent.com/61027817/221419067-73677713-8c57-44b3-b7d5-46d431714aa6.png)
 
-To learn more about Next.js, take a look at the following resources:
+# About me page 
+![about](https://user-images.githubusercontent.com/61027817/221418960-b7a5cd8b-8873-483d-9442-f02f92c99e05.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Contact me page (MongoDb)
+![contactMe](https://user-images.githubusercontent.com/61027817/221418996-8cb669fa-87da-4e7d-81b5-ef57be8536d7.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
