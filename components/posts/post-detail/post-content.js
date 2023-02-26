@@ -1,7 +1,6 @@
 import PostHeader from "./post-header";
 
 import classes from './post-content.module.scss'
-import globals from '../../../src/styles/globals.module.scss'
 
 import ReactMarkdown from 'react-markdown'
 import Image from "next/image";
@@ -25,37 +24,37 @@ function PostContent(props) {
     useEffect(() => {
         setPrevPost(null);
         setNextPost(null);
-        getRelatedPosts();
-    }, [post.slug])
 
+        // We want to display other posts next to each other like
+        // currentPost id = 2 so we display id = 1 as prev and id = 3 as next
+        function getRelatedPosts() {
+            const currentPostId = post.postId;
+            const allPostsIds = props.allPosts.map((ele) => {
+                return ele.postId
+            })
 
-    // We want to display other posts next to each other like
-    // currentPost id = 2 so we display id = 1 as prev and id = 3 as next
-    function getRelatedPosts() {
-        const currentPostId = post.postId;
-        const allPostsIds = props.allPosts.map((ele) => {
-            return ele.postId
-        })
+            // it works only if we have more than 2 posts!
+            if (allPostsIds.length > 2) {
 
-        // it works only if we have more than 2 posts!
-        if (allPostsIds.length > 2) {
+                const currentPostIdInArr = allPostsIds.indexOf(currentPostId);
 
-            const currentPostIdInArr = allPostsIds.indexOf(currentPostId);
+                if (currentPostIdInArr === 0) {
+                    setNextPost(props.allPosts[1])
+                } else if ((currentPostIdInArr > 0) && (currentPostIdInArr < allPostsIds.length - 1)) {
 
-            console.log("hello")
+                    setNextPost(props.allPosts[currentPostIdInArr + 1])
+                    setPrevPost(props.allPosts[currentPostIdInArr - 1])
+                } else if (currentPostIdInArr === allPostsIds.length - 1) {
 
-            if (currentPostIdInArr === 0) {
-                setNextPost(props.allPosts[1])
-            } else if ((currentPostIdInArr > 0) && (currentPostIdInArr < allPostsIds.length - 1)) {
-
-                setNextPost(props.allPosts[currentPostIdInArr + 1])
-                setPrevPost(props.allPosts[currentPostIdInArr - 1])
-            } else if (currentPostIdInArr === allPostsIds.length - 1) {
-
-                setPrevPost(props.allPosts[currentPostIdInArr - 1])
+                    setPrevPost(props.allPosts[currentPostIdInArr - 1])
+                }
             }
         }
-    }
+
+    }, [post.postId, props.allPosts])
+
+
+
 
     const customRenderers = {
         paragraph(paragraph) {
