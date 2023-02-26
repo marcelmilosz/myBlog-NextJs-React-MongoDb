@@ -5,6 +5,9 @@ export default function Document() {
     <Html lang="en" style={{ scrollBehavior: 'smooth' }}>
       <Head >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"></link>
+        <meta name="description" content="Free Full Stack tutorials" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, NextJs" />
+        <meta name="author" content="Marcel Miłosz, marcel.milosz99@gmail.com" />
       </Head>
       <body>
         <Main />

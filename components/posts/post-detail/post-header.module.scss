@@ -12,7 +12,7 @@
     img {
         max-width: 70%;
 
-        @include mobile() {
+        @include tablet() {
             max-width: 100%;
         }
     }
