@@ -5,11 +5,15 @@ import classes from './post-content.module.scss'
 import ReactMarkdown from 'react-markdown'
 import Image from "next/image";
 
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark'
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import js from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript'
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css'
 
+SyntaxHighlighter.registerLanguage('js', js)
+SyntaxHighlighter.registerLanguage('css', css)
 
 function PostContent(props) {
 
@@ -27,7 +31,7 @@ function PostContent(props) {
 
         // We want to display other posts next to each other like
         // currentPost id = 2 so we display id = 1 as prev and id = 3 as next
-        function getRelatedPosts() {
+        const getRelatedPosts = () => {
             const currentPostId = post.postId;
             const allPostsIds = props.allPosts.map((ele) => {
                 return ele.postId
@@ -50,6 +54,8 @@ function PostContent(props) {
                 }
             }
         }
+
+        getRelatedPosts();
 
     }, [post.postId, props.allPosts])
 
@@ -146,7 +152,7 @@ function PostContent(props) {
                     <div className={classes.otherPostsContainer}>
 
                         <Link href={`/posts/${prevPost.slug}`}>
-                            <div className={classes.otherPostsBox} style={{ width: "50%", flex: "none" }}>
+                            <div className={classes.otherPostsBox} style={{ width: "100%", flex: "none" }}>
                                 <div className={classes.otherPostImage}>
                                     <p className={classes.otherInfo}> Previous </p>
                                     <time> {prevPost.date} </time>
@@ -172,7 +178,7 @@ function PostContent(props) {
                     <div className={classes.otherPostsContainer}>
 
                         <Link href={`/posts/${nextPost.slug}`}>
-                            <div className={classes.otherPostsBox} style={{ width: "50%", flex: "none" }}>
+                            <div className={classes.otherPostsBox} style={{ width: "100%", flex: "none" }}>
                                 <div className={classes.otherPostImage}>
                                     <p className={classes.otherInfo}> Next </p>
                                     <time> {nextPost.date} </time>

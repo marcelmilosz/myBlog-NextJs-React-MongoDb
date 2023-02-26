@@ -1,11 +1,13 @@
 .PostItem {
     width: 100%;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
 
     box-shadow: 0px 0px 9px #bbb;
 
     transition: transform 200ms;
+
+    overflow: hidden;
 
     a {
         text-decoration: none;
