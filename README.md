@@ -1,14 +1,14 @@
-## Hello!
+## Hello! 👋
 
 This is my NextJs project that I wanted to do for a long time. 
-I recently finished NextJs course, and because of that, I wanted to use this knowledge to create something with it!
+I recently finished NextJs course (~30h of contect and work), and because of that, I wanted to use this knowledge to create something with it!
 
 Soo.. 
 
 This is a full stack page, hosted using Vercel on this link: 
 https://my-blog-seven-gamma.vercel.app/
 
-What I've learned:
+🕵🏻 What I've learned:
 - NextJs pre-rendering stuff
 - Using getStaticProps, getStaticPaths
 - Using Next/Link, Next/Image
@@ -16,10 +16,12 @@ What I've learned:
 - Using markdown files and showing them on screen!
 - Configuring _app and _document files
 - Storing files in correct folders
+- RWD so this blog will be pretty on mobile and tablet
+- SCSS, mixins
 
 This project can be a template for your own blog, only thing you have to provide is .md files and images in 'posts' folders!
 
-On this blog we have:
+This blog includes:
 
 # Hero and featured post page 
 ![Zrzut ekranu 2023-02-26 o 16 04 19](https://user-images.githubusercontent.com/61027817/221418875-46aa0446-595a-4e6a-acc8-9235073401b6.png)
