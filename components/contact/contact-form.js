@@ -90,19 +90,18 @@ function ContactForm() {
 
     return (
         <section className={classes.ContactForm}>
-            <h1> How can i help you </h1>
             <form className={classes.form} onSubmit={sendMessageHandler}>
                 <div className={classes.controls}>
                     <div className={classes.control}>
-                        <label htmlFor="email"> Your Email </label>
+                        <label htmlFor="email"> Your Email </label> <br />
                         <input type='email' id='email' required value={enteredEmail} onChange={(e) => { setEnteredEmail(e.target.value) }} />
                     </div>
                     <div className={classes.control}>
-                        <label htmlFor="name"> Your Name </label>
+                        <label htmlFor="name"> Your Name </label><br />
                         <input type='text' id='name' required value={enteredName} onChange={(e) => { setEnteredName(e.target.value) }} />
                     </div>
                     <div className={classes.control}>
-                        <label htmlFor="message"> Your Message </label>
+                        <label htmlFor="message"> Your Message </label><br />
                         <textarea rows='5' id='message' value={enteredMessage} required onChange={(e) => { setEnteredMessage(e.target.value) }}></textarea>
                     </div>
 

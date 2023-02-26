@@ -16,7 +16,7 @@ function AboutPage() {
 
                         <div className={classes.AboutMeContainer}>
                             <Image src={myAvatar} alt="Marcel Milosz" width={100} height={100} />
-                            <p> Welcome to my blog about mastering full stack web development! My name is Marcel and I&apos;m a passionate web developer with years of experience working with various technologies and frameworks. I created this blog to share my knowledge and experience with those who want to become proficient in full stack web development.</p>
+                            <p> Welcome to my blog about mastering full stack web development! My name is <b>Marcel</b> and I&apos;m a passionate web developer with years of experience working with various technologies and frameworks. I created this blog to share my knowledge and experience with those who want to become proficient in full stack web development.</p>
                         </div>
 
                         <div className={classes.AboutBlogContainer}>

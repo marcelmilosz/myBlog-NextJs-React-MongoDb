@@ -19,8 +19,10 @@ function Notification(props) {
 
   return ReactDOM.createPortal((
     <div className={cssClasses}>
-      <h2>{title}</h2>
-      <p>{message}</p>
+      <div className={classes.wrapper}>
+        <h2>{title}</h2>
+        <p>{message}</p>
+      </div>
     </div>
   ), document.getElementById('notifications'));
 }
