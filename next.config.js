@@ -4,7 +4,7 @@ const nextConfig = {
 
   env: {
     mongodb_username: 'marcelBlog',
-    mongodb_password: 'olEU1X3fku1YK4J8',
+    mongodb_password: 'YOUR_PASSWORD',
     mongodb_cluster: 'cluster0',
     mongodb_database: 'my-site',
   }
